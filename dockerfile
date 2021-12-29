@@ -1,8 +1,9 @@
 FROM python:3.8-slim-buster
 
-WORKDIR /web
+COPY ./web /web 
 
-COPY requirements.txt requirements.txt
+WORKDIR /web 
+
 RUN pip3 install -r requirements.txt
 
 COPY . .
